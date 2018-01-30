@@ -1,4 +1,4 @@
-#Chat application using socket.IO and python flask framework
+# Chat application using socket.IO and python flask framework
 
 Simple Real-Time chat application using python and basic HTML/CSS.
 
