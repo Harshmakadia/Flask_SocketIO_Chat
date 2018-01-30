@@ -1,0 +1,52 @@
+    <html>
+        <head>
+            <title>Flask-SocketIO-Chat: {{ room }}</title>
+            <script type="text/javascript" src="{{ url_for('static',filename='js/jquery.js') }}"></script>
+            <script type="text/javascript" src="{{ url_for('static',filename='js/socket.io.js') }}"></script>
+            <script type="text/javascript" src="{{ url_for('static',filename='js/bootstrap.min.js') }}"></script>
+            <script type="text/javascript" src="{{ url_for('static',filename='js/socket-chat.js') }}"></script>
+            <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+            <link href="/static/css/chat.css" rel="stylesheet">
+            <link href="/static/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+            <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+            <meta name="viewport" content="width=device-width, initial-scale = 1 , maximum-scale=1, , maximum-scale = 1, user-scalable = 0">
+        </head>
+        <body>
+        <!----------------------Neel code need to place leave room button ------------------------------------------------------>
+            <!--<h1>{{ room }}</h1>
+            <textarea id="chat" cols="80" rows="20"></textarea><br><br>
+            <input id="text" size="80" placeholder="Enter your message here"><br><br>-->
+            <!---------------------------------------------------------------------------->
+            <div id="user_id" class="hidden">{{ user_id }}</div>
+            <div id="color" class="hidden">{{ color }}</div>
+            <div class="menu">
+                <div class="row">
+                    <div class="col-md-8 col-sm-8 col-lg-8 col-xs-8">
+                        <div class="back"><img src="/static/img/logo.png" draggable="false"/></div>
+                        <div class="name">Chat Room</div>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-lg-4 col-xs-4">
+                        <div class="leave-btn"><button type="button"  id="leaveRoom" class="btn btn-primary">Leave Room</button></div>
+                    </div>
+                </div>
+            </div>
+            <div class="area">
+                <ol class="chat">
+                    <li class="other">
+                         <div class="avatar"><img src="http://i.imgur.com/DY6gND0.png" draggable="false"/></div>
+                         <div class="msg">
+                            <p>Welcome!</p>
+                            <p>
+                               Hungry?
+                               <emoji class="pizza"/>
+                            </p>
+                            <time>11:17 AM</time>
+                         </div>
+                    </ol>
+                </div>
+        <input class="textarea msg-text {{ user_id }}" type="text" maxlength="500" placeholder="Type here!"/>
+        <div class="emojis"></div>
+        <div class="send-btn"><button type="button" class="btn btn-primary send-chat">Send</button></div>
+        <!-- Bootstrap Core JavaScript -->
+        </body>
+    </html>
